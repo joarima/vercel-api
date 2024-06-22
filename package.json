@@ -2,12 +2,14 @@
   "repository": "https://github.com/vercel/examples.git",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "devDependencies": {
     "@types/node": "^20.14.8",
     "@vercel/node": "^3.1.7",
     "typescript": "^5.5.2"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.600.0"
+    "@aws-sdk/client-s3": "^3.600.0",
+    "@aws-sdk/s3-presigned-post": "^3.600.0"
   }
 }
