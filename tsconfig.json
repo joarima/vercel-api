@@ -1,15 +1,8 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "strict": true,
-    "preserveConstEnums": true,
-    "noEmit": true,
-    "sourceMap": false,
-    "moduleResolution":"node",
-    "esModuleInterop": true, 
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true, 
-    "isolatedModules": true, 
-  },
-  "exclude": ["node_modules", "**/*.test.ts"]
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node"]
+  }
 }
