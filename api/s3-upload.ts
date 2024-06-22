@@ -60,36 +60,4 @@ const POST = allowCors(
     }
   }
 )
-
-// const POST = async (request: VercelRequest, response: VercelResponse) => {
-//   const { filename, contentType } = await request.body
-
-//   try {
-//     const client = new S3Client({ region: process.env.AWS_S3_REGION })
-
-//     if (!process.env.AWS_S3_BUCKET)
-//       return response.json({
-//         error: 'environment variable AWS_S3_BUCKET not found.',
-//       })
-
-//     const { url, fields } = await createPresignedPost(client, {
-//       Bucket: process.env.AWS_S3_BUCKET,
-//       Key: 'images/' + filename,
-//       Conditions: [
-//         ['content-length-range', 0, 104857600],
-//         ['starts-with', '$Content-Type', contentType],
-//       ],
-//       Fields: {
-//         acl: 'public-read',
-//         'Content-Type': contentType,
-//       },
-//       Expires: 600, // Seconds before the presigned post expires. 3600 by default.
-//     })
-
-//     return response.json({ url, fields })
-//   } catch (error) {
-//     console.log(error)
-//     return response.json({ error: 'createPresignedPost error.' })
-//   }
-// }
 export default POST
